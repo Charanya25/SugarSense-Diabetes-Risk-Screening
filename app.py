@@ -8,9 +8,10 @@ st.set_page_config(
     page_icon="🩺"
 )
 
+
 @st.cache_resource
 def load_artifact():
-    return joblib.load("artifacts/sugarsense_model.joblib")
+    return joblib.load("sugarsense_model.joblib")
 
 artifact = load_artifact()
 model = artifact["model"]
